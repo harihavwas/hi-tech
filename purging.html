@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>hi-tech</title>
+    <title>Purging</title>
     <link rel="icon" href="images/hi-tech_white.png" type="image/png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,16 +22,16 @@
             <div class="p-4 pt-5">
                 <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/hi-tech_black.jpg);"></a>
                 <ul class="list-unstyled components mb-5">
-                    <li class="active">
-                        <a href="#homeSubmenu" data-toggle="" aria-expanded="false"
+                    <li class="">
+                        <a href="./index.html" data-toggle="" aria-expanded="false"
                             class="dropdown-toggle">Home</a>
                     </li>
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
                             class="dropdown-toggle">Scripts</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a href="./purging.html">Purging</a>
+                            <li class="active">
+                                <a href="#">Purging</a>
                             </li>
                         </ul>
                     </li>
@@ -45,29 +45,6 @@
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
 
-            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light align-middle">
-                <div class="container-fluid align-middle">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                        <i class="fa fa-bars"></i>
-                        <span class="sr-only">Toggle Menu</span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse align-middle ml-auto" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active ml-auto">
-                                <p class="fw-bold ml-auto"><span id="current-time"></span></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav> -->
-
             <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex align-items-center">
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="btn btn-primary">
@@ -80,7 +57,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <div class="d-flex align-items-center flex-grow-1"> <!-- Added a flex container -->
-                        <p class="m-0 fs-5 ps-1">Dashboard</p> <!-- Adjusted margin and padding -->
+                        <p class="m-0 fs-5 ps-1">Purging</p> <!-- Adjusted margin and padding -->
                     </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
@@ -91,22 +68,32 @@
                     </div>
                 </div>
             </nav>
-            
-            
-                       
-            
 
-            <h2 class="mb-4">Sidebar #01</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <h2 class="mb-4">Enter the basic configurations</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="FileName">
+                            <label for="floatingInput">File name</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingPassword" placeholder="LogPath">
+                            <label for="floatingPassword">Log path</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingPassword" placeholder="LogBkpPath">
+                            <label for="floatingPassword">Log backup path</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="floatingPassword" placeholder="LogBkpPath">
+                            <label for="floatingPassword">Days to keep backup files</label>
+                          </div>
+                    </div>
+                    <div class="col-6"></div>
+                </div>
+            </div>
+
         </div>
     </div>
 
