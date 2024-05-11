@@ -10,8 +10,12 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,11 +24,11 @@
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar">
             <div class="p-4 pt-5">
-                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/hi-tech_black.jpg);"></a>
+                <a href="#" class="img logo rounded-circle mb-5"
+                    style="background-image: url(images/hi-tech_black.jpg);"></a>
                 <ul class="list-unstyled components mb-5">
                     <li class="">
-                        <a href="./index.html" data-toggle="" aria-expanded="false"
-                            class="dropdown-toggle">Home</a>
+                        <a href="./index.html" data-toggle="" aria-expanded="false" class="dropdown-toggle">Home</a>
                     </li>
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
@@ -56,7 +60,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button> -->
-                    <div class="d-flex align-items-center flex-grow-1"> 
+                    <div class="d-flex align-items-center flex-grow-1">
                         <p class="m-0 fs-5 ps-1">Purging</p>
                     </div>
                     <div class="" id="navbarSupportedContent">
@@ -70,30 +74,48 @@
             </nav>
 
             <h2 class="mb-4">Enter the basic configurations</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="FileName">
-                            <label for="floatingInput">File name</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingPassword" placeholder="LogPath">
-                            <label for="floatingPassword">Log path</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingPassword" placeholder="LogBkpPath">
-                            <label for="floatingPassword">Log backup path</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="floatingPassword" placeholder="LogBkpPath">
-                            <label for="floatingPassword">Days to keep backup files</label>
-                          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="filenameInput" placeholder="FileName">
+                    <label for="filenameInput">File name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="lopathInput" placeholder="LogPath">
+                    <label for="lopathInput">Log path</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="logbkppathInput" placeholder="LogBkpPath">
+                    <label for="logbkppathInput">Log backup path</label>
+                </div>
+                <div class="form-check form-switch mb-3 ms-3">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                        checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Do you want to delete the backup files?</label>
+                </div>
+
+                <div class="form-floating mb-3">
+
+                    <input type="number" class="form-control hidden" id="daystokeepbkpfileInput"
+                        placeholder="LogBkpPath">
+                    <label for="daystokeepbkpfileInput">Days to keep backup files</label>
+                </div>
+                <button type="button" onclick="submitForm()" class="btn btn-outline-warning">Generate Script</button>
+            </div>
+        </div>
+    </div>
+            <div class="container-fluid mt-5 border border-warning-subtle">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="fixed-screen col-lg-6 col-md-12 col-sm-12">
+                            <p id="scriptoutput" class="extra-small-font">
+                                <script src="js/purging.js"></script>
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-6"></div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -102,6 +124,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/currentTime.js"></script>
+    <script src="js/checkboxSwitch.js"></script>
 </body>
 
 </html>
