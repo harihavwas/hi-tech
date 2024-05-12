@@ -5,11 +5,6 @@ function submitForm() {
     var lopathValue = document.getElementById("lopathInput").value;
     var logbkppathValue = document.getElementById("logbkppathInput").value;
 
-    if (filenamevalue !== '' || logbkppathValue !== '' || lopathValue !== '') {
-        alert('Fields are empty!');
-    }
-    //
-
     var formContent0 = "<p>#!/bin/bash<br><br>" +
         "#### Your Configurations #### <br>" +
         "curdate=$(date '+%Y-%m-%d %H:%M:%S')<br>" +
