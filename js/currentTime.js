@@ -14,15 +14,15 @@ setInterval(updateTime, 1000);
 updateTime();
 
 
-function submitForm() {
-    // Show the preload image
-    document.getElementById("preloadContainer").style.display = "block";
+// function submitForm() {
+//     // Show the preload image
+//     document.getElementById("preloadContainer").style.display = "block";
     
-    // Here you would typically submit your form or perform your desired action
-    // For demonstration purposes, let's simulate a delay with setTimeout
-    setTimeout(function() {
-      // Hide the preload image when done (replace this with your actual form submission logic)
-      document.getElementById("preloadContainer").style.display = "none";
-    }, 3000); // Replace 3000 with the duration of your form submission
-  }
+//     // Here you would typically submit your form or perform your desired action
+//     // For demonstration purposes, let's simulate a delay with setTimeout
+//     setTimeout(function() {
+//       // Hide the preload image when done (replace this with your actual form submission logic)
+//       document.getElementById("preloadContainer").style.display = "none";
+//     }, 3000); // Replace 3000 with the duration of your form submission
+//   }
   

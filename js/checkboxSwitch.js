@@ -29,14 +29,14 @@ function toggleInfo() {
     }
 }
 
-function copyColumnContent() {
-    var column = document.querySelector('.column');
-    var content = column.innerText;
-    navigator.clipboard.writeText(content)
-        .then(() => {
-            alert('Column content copied to clipboard');
-        })
-        .catch(err => {
-            console.error('Could not copy text: ', err);
-        });
-}
+// function copyColumnContent() {
+//     var column = document.querySelector('.column');
+//     var content = column.innerText;
+//     navigator.clipboard.writeText(content)
+//         .then(() => {
+//             alert('Column content copied to clipboard');
+//         })
+//         .catch(err => {
+//             console.error('Could not copy text: ', err);
+//         });
+// }
