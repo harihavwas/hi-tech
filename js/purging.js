@@ -5,6 +5,9 @@ function submitForm() {
     var lopathValue = document.getElementById("lopathInput").value;
     var logbkppathValue = document.getElementById("logbkppathInput").value;
 
+
+    //
+
     var formContent0 = "<p>#!/bin/bash<br><br>" +
         "#### Your Configurations #### <br>" +
         "curdate=$(date '+%Y-%m-%d %H:%M:%S')<br>" +
@@ -75,16 +78,28 @@ function submitForm() {
 
     var footerLine = 'echo " ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== "<br>';
 
-    if (filenamevalue !== '' && logbkppathValue !== '' && lopathValue !== '') {
-        if (daystokeepbkpfileValue === '') {
-            // var contentToCopy = formContent0 + footerLine;
-            document.getElementById("scriptoutput").innerHTML = formContent0 + footerLine;
+    if (filenamevalue === '' || logbkppathValue === '' || lopathValue === '') {
+        alert('Fields are empty!');
+    } else {
+        if (filenamevalue !== '' && logbkppathValue !== '' && lopathValue !== '') {
+            if (daystokeepbkpfileValue === '') {
+                // var contentToCopy = formContent0 + footerLine;
+                document.getElementById("scriptoutput").innerHTML = formContent0 + footerLine;
 
-        } else {
-            // var contentToCopy = formContent1 + formContent2 + footerLine;
-            document.getElementById("scriptoutput").innerHTML = formContent1 + formContent2 + footerLine;
+            } else {
+                if (daystokeepbkpfileValue >= 2) {
+                    document.getElementById("scriptoutput").innerHTML = formContent1 + formContent2 + footerLine;
+                }
+                // var contentToCopy = formContent1 + formContent2 + footerLine;
+                else {
+                    alert('Days should be more than 1 !');
+                }
+
+            }
         }
     }
+
+
     // document.getElementById('copyButton').addEventListener('click', function () {
 
     // navigator.clipboard.writeText(contentToCopy)
