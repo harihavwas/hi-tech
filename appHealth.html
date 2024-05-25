@@ -38,11 +38,11 @@
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
                             class="dropdown-toggle">Scripts</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li class="active">
-                                <a href="#">Purging</a>
+                            <li class="">
+                                <a href="./purging.html">Purging</a>
                             </li>
-                            <li>
-                                <a href="./appHealth.html">App Health</a>
+                            <li class="active">
+                                <a href="#">App Health</a>
                             </li>
                         </ul>
                     </li>
@@ -68,7 +68,7 @@
                         <i class="fa fa-bars"></i>
                     </button> -->
                     <div class="d-flex align-items-center flex-grow-1">
-                        <p class="m-0 fs-5 ps-1">Purging</p>
+                        <p class="m-0 fs-5 ps-1">Application Health</p>
                     </div>
                     <div class="" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
@@ -84,49 +84,30 @@
             <div class="container mb-5">
                 <div class="row">
                     <div class="col-12">
-                        <p class="fw-lighter fst-italic fs-6 text-danger-emphasis">* Enter the file name as per the Log
-                            name <br>
-                            * Do not add / at last of the path <br>
-                            * Select Days to keep backup files more than 0 to avoid issues <br>
-                            * Please confirm the script before trying to execute</p>
+                        <p class="fw-lighter fst-italic fs-6 text-danger-emphasis">
+                            * Add the applications by comma separated without space. <br>
+                            * Add the script path
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12">
-                        <form action="">
+                        <form action="" id="dynamicForm">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="filenameInput" placeholder="FileName" required>
-                                <label for="filenameInput">File name</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="lopathInput" placeholder="LogPath" required>
-                                <label for="lopathInput">Log path</label>
+                                <input type="text" class="form-control" id="appnameInput" placeholder="AppName" required>
+                                <label for="appnameInput">Applications (app1,app2,....)</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="logbkppathInput" placeholder="LogBkpPath"
-                                    required>
-                                <label for="logbkppathInput">Log backup path</label>
-                            </div>
-                            <div class="form-check form-switch mb-3 ms-3">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                                    checked>
-                                <label class="form-check-label" for="flexSwitchCheckChecked">Do you want to delete the
-                                    backup files?</label>
-                            </div>
-    
-                            <div class="form-floating mb-3">
-    
-                                <input type="number" class="form-control hidden" id="daystokeepbkpfileInput"
-                                    placeholder="LogBkpPath" required>
-                                <label for="daystokeepbkpfileInput">Days to keep backup files</label>
-                            </div>
+                                <input type="text" class="form-control" id="scriptpathInput" placeholder="ScriptPath" required>
+                                <label for="scriptpathInput">Script path</label>
+                            </div>    
                         </form>
                         <!-- <input type="submit" value="Submit" onclick="submitForm()" class="btn btn-outline-warning"> -->
                         <button type="submit" onclick="submitForm()" class="btn btn-outline-warning">Generate
                             Script</button>
-                        <a href="./purging.html" class="btn btn-outline-primary">Reload</a>
+                        <a href="./appHealth.html" class="btn btn-outline-primary">Reload</a>
                         <!-- <div class="preload-container" id="preloadContainer">
                             <img src="images/hi-tech_black.png" alt="Loading..." class="preload-image">
                           </div> -->
@@ -155,7 +136,8 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/currentTime.js"></script>
-        <script src="js/checkboxSwitch.js"></script>
+        <!-- <script src="js/checkboxSwitch.js"></script> -->
+        <script src="js/appHealth.js"></script>
 </body>
 
 </html>
